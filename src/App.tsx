@@ -8,13 +8,20 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const submitContact = useMutation(api.contacts.submitContact);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "light") {
+    setDarkMode(false);
+    document.documentElement.classList.remove("dark");
+  } else {
+    // Default to dark mode
+    setDarkMode(true);
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+}, []);
+
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
