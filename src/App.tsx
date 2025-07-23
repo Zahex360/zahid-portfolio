@@ -58,7 +58,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-bold text-xl text-blue-900 dark:text-blue-400">
-              Zahid Sami
+              Zahid Alabadllah
             </div>
             <div className="hidden md:flex space-x-8">
               {[
@@ -102,13 +102,13 @@ export default function App() {
             <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl">
               <img
                 src={`${import.meta.env.BASE_URL}Zahid.jpg`}
-                alt="Zahid Sami Alabadllah"
+                alt="Zahid Alabadllah"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-blue-900 dark:text-blue-400">
-            Zahid Sami Alabadllah
+            Zahid Alabadllah
           </h1>
           <h2 className="text-2xl md:text-3xl mb-6 text-gray-700 dark:text-gray-300">
             Cybersecurity Specialist & KFUPM Graduate
@@ -119,8 +119,8 @@ export default function App() {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Zahid_Sami_Alabadllah_CV.pdf";
-              link.download = "Zahid_Sami_Alabadllah_CV.pdf";
+              link.href = "/Zahid_Alabadllah_CV.pdf";
+              link.download = "Zahid_Alabadllah_CV.pdf";
               link.click();
             }}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -418,7 +418,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-blue-900 dark:bg-gray-800 text-white py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg mb-2">Zahid Sami Alabadllah</p>
+          <p className="text-lg mb-2">Zahid Alabadllah</p>
           <p className="text-blue-200 dark:text-gray-400">
             Cybersecurity Specialist • KFUPM Graduate
           </p>
