@@ -8,20 +8,19 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const submitContact = useMutation(api.contacts.submitContact);
 
-useEffect(() => {
-  const savedTheme = localStorage.getItem("theme");
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
 
-  if (savedTheme === "light") {
-    setDarkMode(false);
-    document.documentElement.classList.remove("dark");
-  } else {
-    // Default to dark mode
-    setDarkMode(true);
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
-}, []);
-
+    if (savedTheme === "light") {
+      setDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      // Default to dark mode
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -100,10 +99,7 @@ useEffect(() => {
       </nav>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 dark:from-gray-900 dark:to-blue-900"
-      >
+      <section id="home" className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl">
@@ -124,11 +120,16 @@ useEffect(() => {
             Driven by curiosity. Passionate about securing the digital world.
           </p>
           <button
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/Zahid_Alabadllah_CV.pdf";
-              link.download = "Zahid_Alabadllah_CV.pdf";
-              link.click();
+            onClick={(e) => {
+              e.preventDefault(); // ما يحتاج فعليًا هنا بس زيادة تأكيد
+              toast.info(
+                "To receive my CV, please use the contact section below and include your email. I’ll get back to you shortly!"
+              );
+
+              // Scroll smoothly to contact section
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
