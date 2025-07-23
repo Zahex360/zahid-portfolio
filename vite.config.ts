@@ -4,6 +4,6 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/zahid-portfolio/',  // مهم جداً
+  base: '/',  // مهم جداً
   plugins: [react()],
 });
