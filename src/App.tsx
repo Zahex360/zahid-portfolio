@@ -101,7 +101,7 @@ export default function App() {
           <div className="mb-8">
             <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl">
               <img
-                src="/Zahid.jpg"
+                src={`${import.meta.env.BASE_URL}Zahid.jpg`}
                 alt="Zahid Sami Alabadllah"
                 className="w-full h-full object-cover"
               />
